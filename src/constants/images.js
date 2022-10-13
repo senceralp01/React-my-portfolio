@@ -13,6 +13,7 @@ import mu5 from '../assets/mu5.png';
 import node from '../assets/node.png';
 import python from '../assets/python.png';
 import react from '../assets/react.png';
+import react2 from '../assets/react2.png';
 import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
@@ -51,6 +52,7 @@ export default {
   node,
   python,
   react,
+  react2,
   redux,
   sass,
   typescript,
