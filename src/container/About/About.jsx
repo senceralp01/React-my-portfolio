@@ -13,7 +13,7 @@ const About = () => {
 
     client.fetch(query)
       .then((data) => setAbouts(data))
-  }, [])
+  }, []);
   
 
   return (
