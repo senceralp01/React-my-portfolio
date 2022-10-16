@@ -83,10 +83,9 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </>
   )
 }
 
-export default Skills
+export default AppWrap(Skills, 'skills');
