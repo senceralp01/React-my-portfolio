@@ -25,8 +25,19 @@ const Work = () => {
   }, [])
 
 
-  const handleWorkFilter = () => {
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if (item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
   }
 
   return (
@@ -34,7 +45,7 @@ const Work = () => {
       <h2 className='head-text'>My projects <span>that contributed a lot</span> <br />to my <span>self-development</span></h2>
 
       <div className='app__work-filter'>
-        {['ReactJS', 'JavaScript', 'TypeScript', 'Bootstrap', 'TailwindCSS', 'SCSS/CSS', 'All'].map((item, index) => (
+        {['ReactJS', 'Javascript', 'TypeScript', 'Bootstrap', 'TailwindCSS', 'SCSS/CSS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
