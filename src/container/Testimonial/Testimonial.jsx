@@ -40,7 +40,7 @@ const Testimonial = () => {
           <div className="app__testimonial-item app__flex">
             <img src={urlFor(testi.imageurl)} alt="testimonial" />
             <div className="app__testimonial-content">
-              <p className="p-text">{testi.feedback}</p>
+              <p className="p-text" style={{ fontStyle: 'italic'}}>{testi.feedback}</p>
               <div>
                 <h4 className='bold-text'>{testi.name}</h4>
                 <h5 className='p-text'>{testi.company}</h5>
