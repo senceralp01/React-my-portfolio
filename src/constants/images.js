@@ -7,6 +7,8 @@ import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
 
+import email from '../assets/email.png'
+
 export default {
   mobile,
   react,
@@ -15,4 +17,5 @@ export default {
   profile,
   circle,
   logo,
+  email
 };
