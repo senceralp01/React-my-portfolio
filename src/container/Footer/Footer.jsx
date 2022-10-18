@@ -40,11 +40,11 @@ const Footer = () => {
       <h2 className="head-text">You can contact me</h2>
 
       <div className="app__footer-cards">
-        <div className="adpp__footer-card">
+        <div className="app__footer-card">
           <img src={images.email} alt="email" />
           <a href="mailto:senceralpdogdu@gmail.com" className='p-text'>senceralpdogdu@gmail</a>
         </div>
-        <div className="adpp__footer-card">
+        <div className="app__footer-card">
           <img src={images.mobile} alt="email" />
           <a href="tel:+905056156227" className='p-text'>+90 (505) 615 6227</a>
         </div>
@@ -63,17 +63,17 @@ const Footer = () => {
               className="p-text"
               placeholder="Your Message"
               value={message}
-              name={message}
+              name="message"
               onChange={handleChangeInput}
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Sending...' : 'Send Message'}</button>
         </div>
         :
-          <div>
-            <h3 className='head-text'>Thank you for getting touch!</h3>
-          </div>
-        }
+        <div>
+          <h3 className='head-text'>Thank you for getting touch!</h3>
+        </div>
+      }
     </>
   )
 }
