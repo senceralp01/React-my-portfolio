@@ -5,21 +5,21 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
-import './Work.scss';
+import './Projects.scss';
 
-const Work = () => {
+const Projects = () => {
 
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [works, setWorks] = useState([]);
+  const [projects, setprojects] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "projects"]';
 
     client.fetch(query)
       .then((data) => {
-        setWorks(data);
+        setprojects(data);
         setFilterWork(data);
       })
   }, [])
@@ -33,9 +33,9 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === 'All') {
-        setFilterWork(works);
+        setFilterWork(projects);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(projects.filter((work) => work.tags.includes(item)));
       }
     }, 500);
   }
@@ -110,7 +110,7 @@ const Work = () => {
 }
 
 export default AppWrap(
-  MotionWrap(Work, 'app__works'),
+  MotionWrap(Projects, 'app__works'),
   'projects',
   'app__primarybg'
 );
