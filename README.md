@@ -1,4 +1,4 @@
-This project is my own portfolio website developed by me.
+# My Portfolio Website
 
 It has been developed using ReactJS for frontend and using Sanity for backend.
 
