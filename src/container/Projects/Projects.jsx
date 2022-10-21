@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -13,6 +14,8 @@ const Projects = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [projects, setprojects] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  
+  const isMobile = useMediaQuery({ query: '(max-width: 720px)' });
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -67,7 +70,8 @@ const Projects = () => {
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
               <motion.div
-                whileHover={{ opacity: [0, 1] }}
+                {...(isMobile ? {whileInView:{ opacity: [0, 1] }} : {whileHover:{ opacity: [0, 1] }})}
+                // whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >

@@ -48,7 +48,9 @@
 
     .app__work-item {
         width: 270px;
+        min-height: 380px;
         flex-direction: column;
+        justify-content: flex-start;
 
         margin: 2rem;
         padding: 1rem;
