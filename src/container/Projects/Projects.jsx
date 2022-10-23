@@ -45,7 +45,7 @@ const Projects = () => {
 
   return (
     <>
-      <h2 className='head-text'>My projects <span>contributed</span> <br />to my <span>self-development</span></h2>
+      <h2 className='head-text'>My developments <span>that contributed</span> <br />to my <span>self-development</span></h2>
 
       <div className='app__work-filter'>
         {['ReactJS', 'Javascript', 'Typescript', 'Bootstrap', 'TailwindCSS', 'SCSS/CSS', 'Front End', 'Full Stack', 'All'].map((item, index) => (
