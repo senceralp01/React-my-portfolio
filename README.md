@@ -8,4 +8,4 @@ By including the Framer Motion for animations and Higher-Order Components for wr
 
 👇 Click on the link below to visit the live site 👇
 
-https://senceralp.netlify.app
+https://senceralpdogdu.com
