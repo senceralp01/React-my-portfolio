@@ -10,11 +10,13 @@ const About = () => {
   const [abouts, setAbouts] = useState([]);
   const [educations, setEducations] = useState([]);
   const [languages, setLanguages] = useState([]);
+  const [interests, setInterests] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
     const educationQuery = '*[_type == "education"]';
     const languageQuery = '*[_type == "language"]';
+    const interestQuery = '*[_type == "interest"]';
 
     client.fetch(query)
       .then((data) => setAbouts(data));
@@ -26,6 +28,8 @@ const About = () => {
       .then((data) => {
         setLanguages(data[0].language)
       });
+    client.fetch(interestQuery)
+      .then((data) => setInterests(data));
   }, []);
 
 
@@ -50,53 +54,74 @@ const About = () => {
         ))}
       </div>
 
-      <div className='app__moreinfo'>
-        <div className='app__educations'>
+      <div className='app__details'>
+        <div className='app__details-firstcolumn'>
           <h1>Education</h1>
-          {educations.map((education, index) => (
-            <motion.div
-              className='app__education'
-              key={index}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              <div className='app__education-logo'>
-                <img src={urlFor(education.img)} alt="school-logo" />
-              </div>
-
-              <div className='app__education-info'>
-                <div className='info-school'>
-                  <h4>{education.department}</h4>
-                  <p>{education.school}</p>
-                </div>
-                <div className='info-year'>
-                  <p>{education.year}</p>
-                  <p>{education.city}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <div className='app__languages'>
-          <h1>Languages</h1>
-          <div className='app__languages-cover'>
-            {languages.map((lang, index) => (
+          <div className="app__educations">
+            {educations.map((education, index) => (
               <motion.div
-                className='app__language'
+                className='app__education'
                 key={index}
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-
-                <div className='app__language-info'>
-                  <h4>{lang.language}</h4>
-                  <p>{lang.level}</p>
+                <div className='app__education-logo'>
+                  <img src={urlFor(education.img)} alt="school-logo" />
                 </div>
-                <div className='app__language-flag'>
-                  <img src={urlFor(lang.img)} alt="language-flag" />
+
+                <div className='app__education-info'>
+                  <div className='info-school'>
+                    <h4>{education.department}</h4>
+                    <p>{education.school}</p>
+                  </div>
+                  <div className='info-year'>
+                    <p>{education.year}</p>
+                    <p>{education.city}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+        <div className='app__details-secondcolumn'>
+          <div className='secondcolumn-firstrow'>
+            <h1>Languages</h1>
+            <div className='app__languages'>
+              {languages.map((lang, index) => (
+                <motion.div
+                  className='app__language'
+                  key={index}
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <div className='app__language-info'>
+                    <h4>{lang.language}</h4>
+                    <p>{lang.level}</p>
+                  </div>
+                  <div className='app__language-flag'>
+                    <img src={urlFor(lang.img)} alt="language-flag" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <div className='secondcolumn-secondrow'>
+            <h1>Interests</h1>
+            <div className='app__interests'>
+              {interests.map((int, index) => (
+                <motion.div
+                  className='app__interest'
+                  key={index}
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <div className='app__interest-icon'>
+                    <img src={urlFor(int.img)} alt="interest-icon" />
+                  </div>
+                  <p>{int.interest}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
