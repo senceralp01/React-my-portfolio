@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 const SocialMedia = () => {
   return (
@@ -15,8 +15,8 @@ const SocialMedia = () => {
         </a>
       </div>
       <div>
-        <a href="https://senceralp.netlify.app/" rel="noreferrer" target="_blank">
-          <BsInstagram />
+        <a href="https://wa.me/905056156227" rel="noreferrer" target="_blank">
+          <BsWhatsapp />
         </a>
       </div>
     </div>

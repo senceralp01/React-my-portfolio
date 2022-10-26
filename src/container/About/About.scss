@@ -44,6 +44,7 @@
 .app__details {
     display: flex;
     justify-content: space-between;
+
     margin-top: 2rem;
 
     @media screen and (max-width: 900px) {
@@ -52,9 +53,10 @@
 }
 
 .app__details-firstcolumn {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
+
+    margin-top: 1rem;
 
     h1 {
         margin-left: 0.5rem;
@@ -62,17 +64,20 @@
     }
 
     .app__educations {
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
+        height: 100%;
+
         .app__education {
             display: flex;
             align-items: center;
+
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 15px;
+
             background-color: var(--primary-color);
             transition: all 0.3s ease-in-out;
 
@@ -87,6 +92,7 @@
                 img {
                     width: 100%;
                     height: 100%;
+
                     object-fit: contain;
                     filter: grayscale(1);
                     transition: all 0.3s ease-in-out;
@@ -94,17 +100,18 @@
             }
 
             .app__education-info {
-                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                width: 100%;
                 margin-top: 10px;
                 margin-left: 10px;
 
                 .info-year {
+                    text-align: right;
                     color: var(--gray-color);
                     font-size: 0.8rem;
-                    text-align: right;
                 }
 
                 @media screen and (max-width: 900px) {
@@ -155,8 +162,8 @@
     }
     @media screen and (max-width: 900px) {
         h1 {
-            margin-left: 0;
             text-align: center;
+            margin-left: 0;
         }
     }
 }
@@ -164,6 +171,7 @@
 .secondcolumn-firstrow {
     display: flex;
     flex-direction: column;
+
     margin-left: 2rem;
     margin-top: 1rem;
 
@@ -174,6 +182,7 @@
 
     .app__languages {
         padding: 15px 15px 0;
+
         background-color: var(--primary-color);
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
@@ -181,6 +190,7 @@
         .app__language {
             display: flex;
             align-items: center;
+
             margin-bottom: 15px;
 
             .app__language-flag {
@@ -196,11 +206,12 @@
             }
 
             .app__language-info {
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-start;
+
+                width: 100%;
             }
         }
 
@@ -215,8 +226,8 @@
         margin-left: 0;
 
         h1 {
-            margin-left: 0;
             text-align: center;
+            margin-left: 0;
         }
     }
 }
@@ -224,6 +235,7 @@
 .secondcolumn-secondrow {
     display: flex;
     flex-direction: column;
+
     margin-left: 2rem;
     margin-top: 1rem;
 
@@ -234,6 +246,7 @@
 
     .app__interests {
         padding: 15px 15px 0;
+
         background-color: var(--primary-color);
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
@@ -242,6 +255,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            
             margin-bottom: 3px;
 
             .app__interest-icon {
