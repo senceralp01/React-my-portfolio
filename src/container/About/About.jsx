@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Typed from 'react-typed';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
@@ -32,11 +33,22 @@ const About = () => {
       .then((data) => setInterests(data));
   }, []);
 
-
+  // "<Typed>" includes "<span>" by nature.
   return (
     <>
-      <h2 className='head-text'>More than a <span>Software Developer</span> <br /> I'm a <span>Problem Solver</span></h2>
-
+      <h2 className='head-text'>
+        I describe myself as
+        <br />
+        <Typed
+          strings={[
+            'more than a Software Developer',
+            'a Problem Solver'
+          ]}
+          typeSpeed={50}
+          backSpeed={20}
+          loop >
+        </Typed>
+      </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
