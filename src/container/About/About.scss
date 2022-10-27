@@ -43,9 +43,11 @@
 
 .app__details {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
+    width: 85%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     @media screen and (max-width: 900px) {
         flex-direction: column;
@@ -56,11 +58,13 @@
     display: flex;
     flex-direction: column;
 
+    width: 80%;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
     h1 {
         margin-left: 0.5rem;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
     }
 
     .app__educations {
@@ -134,8 +138,8 @@
 
             @media screen and (min-width: 2000px) {
                 .app__education-logo {
-                    width: 6rem;
-                    height: 6rem;
+                    width: 8rem;
+                    height: 8rem;
                 }
 
                 .app__education-info {
@@ -160,11 +164,28 @@
             }
         }
     }
+
     @media screen and (max-width: 900px) {
+        width: auto;
+
         h1 {
             text-align: center;
             margin-left: 0;
         }
+    }
+}
+
+.app__details-secondcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 2000px) {
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -173,11 +194,10 @@
     flex-direction: column;
 
     margin-left: 2rem;
-    margin-top: 1rem;
 
     h1 {
         margin-left: 0.5rem;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
     }
 
     .app__languages {
@@ -213,6 +233,25 @@
 
                 width: 100%;
             }
+
+            @media screen and (min-width: 2000px) {
+                flex-direction: column-reverse;
+
+                .app__language-flag {
+                    margin-top: 2rem;
+                    width: 6rem;
+                    height: 4rem;
+                }
+
+                .app__language-info {
+                    margin-top: 1rem;
+                    align-items: center;
+                    h4, p{
+                        text-align: center;
+                        font-size: x-large;
+                    }
+                }
+            }
         }
 
         &:hover {
@@ -230,6 +269,12 @@
             margin-left: 0;
         }
     }
+    @media screen and (min-width: 2000px) {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .secondcolumn-secondrow {
@@ -237,11 +282,11 @@
     flex-direction: column;
 
     margin-left: 2rem;
-    margin-top: 1rem;
 
     h1 {
         margin-left: 0.5rem;
-        margin-bottom: 4px;
+        margin-top: 1rem;
+        margin-bottom: 3px;
     }
 
     .app__interests {
@@ -255,7 +300,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            
+
             margin-bottom: 3px;
 
             .app__interest-icon {
@@ -266,6 +311,23 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                }
+            }
+
+            @media screen and (min-width: 2000px) {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .app__interest-icon {
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    margin-top: 2rem;
+                }
+
+                p {
+                    margin-top: 0.9rem;
+                    text-align: center;
+                    font-size: x-large;
                 }
             }
         }
@@ -282,7 +344,15 @@
 
         h1 {
             margin-left: 0;
+            margin-top: 2rem;
             text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 2000px) {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 1rem;
         }
     }
 }
