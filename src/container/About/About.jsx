@@ -36,19 +36,21 @@ const About = () => {
   // "<Typed>" includes "<span>" by nature.
   return (
     <>
-      <h2 className='head-text'>
-        I describe myself as
-        <br />
-        <Typed
-          strings={[
-            'more than a Software Developer',
-            'a Problem Solver'
-          ]}
-          typeSpeed={50}
-          backSpeed={20}
-          loop >
-        </Typed>
-      </h2>
+      <div className='head'>
+        <h2 className='head-text responsive-header'>
+          I describe myself as
+          <br />
+          <Typed
+            strings={[
+              'more than a Software Developer',
+              'a Problem Solver'
+            ]}
+            typeSpeed={50}
+            backSpeed={20}
+            loop >
+          </Typed>
+        </h2>
+      </div>
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div

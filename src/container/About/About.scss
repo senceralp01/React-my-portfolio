@@ -4,12 +4,36 @@
     flex-direction: column;
 }
 
+.head {
+    @media screen and (max-width: 720px) {
+        height: 5rem;
+    }
+
+    @media screen and (max-width: 365px) {
+        height: 10rem;
+        z-index: 2; // for overlapping between typed text and image
+    }
+
+    .responsive-header {
+        @media screen and (max-width: 920px) {
+            font-size: 2rem !important; // overwrites 2.75rem head-text which declared in App.scss;
+        }
+
+        @media screen and (max-width: 220px) {
+            span {
+                color: var(--gray-color);
+            }
+        }
+    }
+}
+
 .app__profiles {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
+    z-index: 1; // for overlapping between typed text and image
 }
 
 .app__profile-item {
