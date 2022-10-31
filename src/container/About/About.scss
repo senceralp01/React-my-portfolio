@@ -65,6 +65,12 @@
     }
 }
 
+@mixin disableTextSelect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 .app__details {
     display: flex;
     justify-content: space-evenly;
@@ -97,6 +103,8 @@
         justify-content: space-between;
 
         height: 100%;
+
+        @include disableTextSelect;
 
         .app__education {
             display: flex;
@@ -231,6 +239,8 @@
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
 
+        @include disableTextSelect;
+
         .app__language {
             display: flex;
             align-items: center;
@@ -319,6 +329,8 @@
         background-color: var(--primary-color);
         border-radius: 15px;
         transition: all 0.3s ease-in-out;
+
+        @include disableTextSelect;
 
         .app__interest {
             display: flex;
