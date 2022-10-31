@@ -37,7 +37,7 @@ const About = () => {
   return (
     <>
       <div className='head'>
-        <h2 className='head-text responsive-header'>
+        <h2 className='head-text header-responsive'>
           I describe myself as
           <br />
           <Typed
@@ -67,7 +67,7 @@ const About = () => {
         ))}
       </div>
 
-      <div className='app__details'>
+      <div className='app__details text-disabled'>
         <div className='app__details-firstcolumn'>
           <h1>Education</h1>
           <div className="app__educations">
