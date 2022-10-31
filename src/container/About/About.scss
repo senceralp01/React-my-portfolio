@@ -243,6 +243,7 @@
 
         .app__language {
             display: flex;
+            justify-content: space-between;
             align-items: center;
 
             margin-bottom: 15px;
@@ -262,7 +263,6 @@
             .app__language-info {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 align-items: flex-start;
 
                 width: 100%;
